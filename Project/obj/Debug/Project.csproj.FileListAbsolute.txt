@@ -8,3 +8,15 @@ C:\Users\HP\Desktop\FinalProject\Project\obj\Debug\Project.csproj.GenerateResour
 C:\Users\HP\Desktop\FinalProject\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
 C:\Users\HP\Desktop\FinalProject\Project\obj\Debug\Project.exe
 C:\Users\HP\Desktop\FinalProject\Project\obj\Debug\Project.pdb
+C:\Users\HP\Desktop\Final Project\Project\bin\Debug\Project.exe.config
+C:\Users\HP\Desktop\Final Project\Project\bin\Debug\Project.exe
+C:\Users\HP\Desktop\Final Project\Project\bin\Debug\Project.pdb
+C:\Users\HP\Desktop\Final Project\Project\obj\Debug\Project.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\Final Project\Project\obj\Debug\Project.Properties.Resources.resources
+C:\Users\HP\Desktop\Final Project\Project\obj\Debug\Project.SignIn.resources
+C:\Users\HP\Desktop\Final Project\Project\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Users\HP\Desktop\Final Project\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\Final Project\Project\obj\Debug\Project.exe
+C:\Users\HP\Desktop\Final Project\Project\obj\Debug\Project.pdb
+C:\Users\HP\Desktop\Final Project\Project\obj\Debug\Project.AdminMenu.resources
+C:\Users\HP\Desktop\Final Project\Project\obj\Debug\Project.EmployeeMenu.resources
