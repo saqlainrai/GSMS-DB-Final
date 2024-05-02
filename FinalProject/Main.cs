@@ -148,6 +148,8 @@ namespace FinalProject
             {
                 // Close the current form
                 this.Close();
+                Login login = new Login();  
+                login.ShowDialog();
             }
             else
             {
