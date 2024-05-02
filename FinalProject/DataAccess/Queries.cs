@@ -37,6 +37,13 @@ namespace FinalProject.DataAccess
                 }
                 else
                 {
+                    //Credentials for Admin in Code
+                    string AdminUserName = "user";
+                    string AdminPassword = "123";
+                    if(credentials.UserName == AdminUserName && credentials.Password == AdminPassword)
+                    {
+                        return "Admin";
+                    }
                     reader.Close();
                     return null; // Return null if credentials are incorrect
                 }

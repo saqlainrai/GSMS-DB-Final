@@ -16,5 +16,10 @@ namespace FinalProject.UI_Forms
         {
             InitializeComponent();
         }
+
+        private void updateProducts_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

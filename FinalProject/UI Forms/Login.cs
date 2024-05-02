@@ -47,6 +47,7 @@ namespace FinalProject.UI_Forms
            
             LoginCredentials credentials = new LoginCredentials(userName, password,null);
             string Role =  Queries.getRole(credentials);
+            
             if(Role == "Admin")
             {
                 Main main = new Main();
@@ -59,10 +60,6 @@ namespace FinalProject.UI_Forms
                 this.Hide();
                 employeeBoard.ShowDialog();
             }
-
-
-
-
             
         }
 
