@@ -66,44 +66,44 @@ namespace FinalProject
 
         private void credentialsBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new credentials());
             credentialsBtn.BackColor = activeButtonColor;
+            OpenChildForm(new credentials());
         }
 
         private void customersBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new customers());
             customersBtn.BackColor = activeButtonColor;
+            OpenChildForm(new customers());
         }
 
         private void employeesBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new employees());
             employeesBtn.BackColor = activeButtonColor;
+            OpenChildForm(new employees());
         }
 
         private void supplierBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new supplier());
             supplierBtn.BackColor = activeButtonColor;  
+            OpenChildForm(new supplier());
         }
 
         private void productsBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new products());
             productsBtn.BackColor = activeButtonColor;  
+            OpenChildForm(new products());
         }
 
         private void categoriesBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new categories());
             categoriesBtn.BackColor = activeButtonColor;    
+            OpenChildForm(new categories());
         }
 
         private void attendenceBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Attendence());
             attendenceBtn.BackColor = activeButtonColor;
+            OpenChildForm(new Attendence());
         }
 
         private void discountsBtn_Click(object sender, EventArgs e)
@@ -114,8 +114,8 @@ namespace FinalProject
 
         private void reportsBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Reports());
             reportsBtn.BackColor = activeButtonColor;   
+            OpenChildForm(new Reports());
         }
 
         private void homeBtn_Click(object sender, EventArgs e)

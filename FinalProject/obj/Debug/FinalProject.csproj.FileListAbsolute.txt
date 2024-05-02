@@ -36,3 +36,41 @@ C:\Users\786\Desktop\FinalProject\obj\Debug\FinalProject.UI_Forms.Reports.resour
 C:\Users\786\Desktop\FinalProject\obj\Debug\FinalProject.UI_Forms.EmployeeDashBoard.resources
 C:\Users\786\Desktop\FinalProject\obj\Debug\FinalProject.UI_Forms.PlaceOrder.resources
 C:\Users\786\Desktop\FinalProject\obj\Debug\FinalProject.UI_Forms.PurchaseProducts.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\bin\Debug\FinalProject.exe.config
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\bin\Debug\FinalProject.exe
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\bin\Debug\FinalProject.pdb
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\bin\Debug\Guna.UI2.dll
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.Main.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.Properties.Resources.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.AddCategories.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.AddCustomers.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.AddEmployees.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.AddProducts.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.addSupplier.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.Attendence.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.categories.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.credentials.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.customers.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.DeleteCategories.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.deleteProducts.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.Discounts.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.EmployeeDashBoard.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.employees.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.Login.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.PlaceOrder.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.products.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.purchaseItems.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.PurchaseProducts.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.Reports.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.supplier.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.UpdateCategories.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.updateCustomers.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.UpdateEmployees.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.updateProducts.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.UI_Forms.updateSupplier.resources
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.csproj.GenerateResource.cache
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.csproj.CopyComplete
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.exe
+C:\Users\HP\Desktop\Github\Final Project\FinalProject\obj\Debug\FinalProject.pdb
