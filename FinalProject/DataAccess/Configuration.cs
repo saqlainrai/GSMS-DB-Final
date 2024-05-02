@@ -38,7 +38,6 @@ namespace DBMidProject.DataAccess
                 // Handle other general exceptions
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally { con.Close(); }
 
         }
 
