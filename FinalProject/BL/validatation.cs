@@ -10,7 +10,7 @@ using System.Text.RegularExpressions;
 
 namespace FinalProject.BL
 {
-    public class validatation
+    public class Validatation
     {
         public enum ValidationPerson
         {

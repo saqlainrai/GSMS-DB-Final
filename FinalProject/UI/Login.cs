@@ -1,6 +1,6 @@
-﻿using DBMidProject.DataAccess;
+﻿//using DBMidProject.DataAccess;
 using FinalProject.BL;
-using FinalProject.DataAccess;
+using FinalProject.DL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,30 +37,37 @@ namespace FinalProject.UI_Forms
             {
                 passwordBx.PasswordChar = '*';
             }
-        
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
             string userName = userNameBx.Text;
             string password = passwordBx.Text;
-           
-            LoginCredentials credentials = new LoginCredentials(userName, password,null);
+
+            DL.Credentials credentials = new DL.Credentials(userName, password,null);
             string Role =  Queries.getRole(credentials);
             
             if(Role == "Admin")
             {
-                Main main = new Main();
+                Main main = new Main(this);
                 this.Hide();
-                main.ShowDialog();
+                main.Show();
+                userNameBx.Clear();
+                passwordBx.Clear();
             }
             else if(Role == "Employee")
             {
-                EmployeeDashBoard employeeBoard = new EmployeeDashBoard();
+                EmployeeDashBoard employeeBoard = new EmployeeDashBoard(this);
                 this.Hide();
                 employeeBoard.ShowDialog();
+                userNameBx.Clear();
+                passwordBx.Clear();
             }
-            
+            else
+            {
+                MessageBox.Show("The User is Not Found in the Database");
+                passwordBx.Clear();
+            }
         }
 
 

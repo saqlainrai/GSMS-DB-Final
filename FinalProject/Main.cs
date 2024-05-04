@@ -16,9 +16,11 @@ namespace FinalProject
         public Form activeForm = null;
         Color defaultButtonColor = Color.FromArgb(33, 11, 97); // Example default color
         Color activeButtonColor = Color.FromArgb(75, 8, 138); // Example active color
-        public Main()
+        Form parentForm;
+        public Main(Form parent)
         {
             InitializeComponent();
+            parentForm = parent;
             
         }
         public void OpenChildForm(Form childForm)
@@ -137,10 +139,6 @@ namespace FinalProject
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-
-
-
-            // Show a message box with Yes and No buttons
             DialogResult result = MessageBox.Show("Are you sure you want to Logout?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             // Check the user's response
@@ -148,8 +146,10 @@ namespace FinalProject
             {
                 // Close the current form
                 this.Close();
-                Login login = new Login();  
-                login.ShowDialog();
+                this.parentForm.Show();
+                
+                //Login login = new Login();                //don't create a new form show the parent form
+                //login.ShowDialog();
             }
             else
             {

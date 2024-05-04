@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FinalProject.BL;
 
-namespace FinalProject.BL
+namespace FinalProject.DL
 {
-    class Admin:Person
+    class Admin : Person
     {
 
     }

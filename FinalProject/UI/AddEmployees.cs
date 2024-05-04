@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FinalProject.BL;
-using FinalProject.DataAccess;
+using FinalProject.DL;
 
 namespace FinalProject.UI_Forms
 {
@@ -29,8 +29,8 @@ namespace FinalProject.UI_Forms
             string address = addressBx.Text;
             string contact = contactBx.Text;
             
-            validatation.ValidationPerson error = validatation.ValidateEmployees(Name, email, salary, FName, AccountNo, address, contact);
-            if (error != validatation.ValidationPerson.None)
+            Validatation.ValidationPerson error = Validatation.ValidateEmployees(Name, email, salary, FName, AccountNo, address, contact);
+            if (error != Validatation.ValidationPerson.None)
             {
                 string errorMessage = GetErrorMessage(error);
                 MessageBox.Show(errorMessage, "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -46,22 +46,22 @@ namespace FinalProject.UI_Forms
             if (YeschkBx.Checked)
             {
                 //assign Credentials to employees, Name as UserName and password is last 5 digits of Account#
-               string password = validatation.getPasswordFromAccount(AccountNo);
-                LoginCredentials credentials = new LoginCredentials(Name, password,"Employee");
+               string password = Validatation.getPasswordFromAccount(AccountNo);
+                Credentials credentials = new Credentials(Name, password,"Employee");
                 Queries.AddEmployee(FName,AccountNo,salary,currentDateTime,email,Name,password,contact);
             }
 
         }
         
-        private  string GetErrorMessage(validatation.ValidationPerson error)
+        private  string GetErrorMessage(Validatation.ValidationPerson error)
         {
             switch (error)
             {
-                case validatation.ValidationPerson.NameExceed:
+                case Validatation.ValidationPerson.NameExceed:
                     return "Please enter correct Name and within 50 characters";
-                case validatation.ValidationPerson.EmailExceed:
+                case Validatation.ValidationPerson.EmailExceed:
                     return "Please enter correct Email and within 60 characters";
-                case validatation.ValidationPerson.ContactExceed:
+                case Validatation.ValidationPerson.ContactExceed:
                     return "Please enter correct Contact and within 50 characters";
 
 

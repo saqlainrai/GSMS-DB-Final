@@ -15,10 +15,11 @@ namespace FinalProject.UI_Forms
         Form activeForm = null;
         Color defaultButtonColor = Color.FromArgb(33, 11, 97); // Example default color
         Color activeButtonColor = Color.FromArgb(75, 8, 138); // Example active color
-        public EmployeeDashBoard()
+        Form parentForm;
+        public EmployeeDashBoard(Form parent)
         {
             InitializeComponent();
-            
+            parentForm = parent;
         }
         public void OpenChildForm(Form childForm)
         {
@@ -71,6 +72,12 @@ namespace FinalProject.UI_Forms
             ResetButtonColors();
             activeForm?.Close();
             homeBtn.BackColor = activeButtonColor;
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.parentForm.Show();
         }
     }
 }
