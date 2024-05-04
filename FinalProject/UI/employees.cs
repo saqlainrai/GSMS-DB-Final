@@ -1,7 +1,10 @@
-﻿using System;
+﻿using FinalProject.BL;
+using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,7 +20,7 @@ namespace FinalProject.UI_Forms
         public employees()
         {
             InitializeComponent();
-            OpenChildForm(new AddEmployees());
+            OpenChildForm(new AddEmployees(this));
         }
         public void OpenChildForm(Form childForm)
         {
@@ -35,12 +38,12 @@ namespace FinalProject.UI_Forms
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new AddEmployees());
+            OpenChildForm(new AddEmployees(this));
         }
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new UpdateEmployees());
+            OpenChildForm(new UpdateEmployees(this));
         }
     }
 }

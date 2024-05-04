@@ -14,9 +14,11 @@ namespace FinalProject.UI_Forms
 {
     public partial class AddEmployees : Form
     {
-        public AddEmployees()
+        Form parentForm;
+        public AddEmployees(Form parentForm)
         {
             InitializeComponent();
+            this.parentForm = parentForm;
         }
 
         private void addBtn_Click(object sender, EventArgs e)

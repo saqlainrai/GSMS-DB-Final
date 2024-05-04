@@ -12,9 +12,11 @@ namespace FinalProject.UI_Forms
 {
     public partial class AddCustomers : Form
     {
-        public AddCustomers()
+        Form parentForm;
+        public AddCustomers(Form parentForm)
         {
             InitializeComponent();
+            this.parentForm = parentForm;
         }
 
         private void addBtn_Click(object sender, EventArgs e)

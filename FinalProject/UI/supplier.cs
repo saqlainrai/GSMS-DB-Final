@@ -34,12 +34,12 @@ namespace FinalProject.UI_Forms
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new addSupplier());
+            OpenChildForm(new addSupplier(this));
         }
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new updateSupplier());
+            OpenChildForm(new updateSupplier(this));
         }
     }
 }

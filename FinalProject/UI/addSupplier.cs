@@ -12,9 +12,11 @@ namespace FinalProject.UI_Forms
 {
     public partial class addSupplier : Form
     {
-        public addSupplier()
+        Form parentForm;
+        public addSupplier(Form parentForm)
         {
             InitializeComponent();
+            this.parentForm = parentForm;
         }
     }
 }

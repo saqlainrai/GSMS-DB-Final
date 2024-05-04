@@ -16,7 +16,7 @@ namespace FinalProject.UI_Forms
         public customers()
         {
             InitializeComponent();
-            OpenChildForm(new AddCustomers());
+            OpenChildForm(new AddCustomers(this));
         }
         public void OpenChildForm(Form childForm)
         {
@@ -33,12 +33,12 @@ namespace FinalProject.UI_Forms
         }
         private void addBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new AddCustomers());
+            OpenChildForm(new AddCustomers(this));
         }
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new updateCustomers());
+            OpenChildForm(new updateCustomers(this));
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
