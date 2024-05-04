@@ -11,7 +11,7 @@ namespace DBMidProject.DataAccess
     public class Configuration
     {
         private static Configuration _instance;
-        private readonly string ConnectionStr = @"Data Source=TABISH-PC;Initial Catalog=GSMS;Integrated Security=True";
+        private readonly string ConnectionStr = @"Data Source=DESKTOP-EEJ020R;Initial Catalog=GSMS;Integrated Security=True";
         private readonly SqlConnection con;
 
         public static Configuration getInstance()
