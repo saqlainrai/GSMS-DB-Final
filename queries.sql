@@ -558,6 +558,29 @@ add constraint FK_LoginCredentials_UserId
 FOREIGN KEY (UserId) REFERENCES LoginCredentials(Id);
 
 
+ALTER TABLE Orders
+ADD CheckColumn AS (CASE WHEN CustomerId IS NULL AND isPurchased = 8 THEN 1
+                         ELSE 0 END) PERSISTED;
+
+ALTER TABLE Orders
+ADD CONSTRAINT CHK_ColumnsNotNull
+CHECK (CheckColumn = 0);
+
+delete from Orders where Id = 2004
+select * from Orders
+insert into Orders values(7, NULL, 320, 7, NULL, '2024-05-03', NULL, 8)
+
+alter table Orders
+alter column CustomerId int;
+
+ALTER TABLE Orders
+DROP CONSTRAINT CHK_ColumnsNotNull;
+
+-- Drop the computed column
+ALTER TABLE Orders
+DROP COLUMN CheckColumn;
+
+select * from LookUps
 
 
 
