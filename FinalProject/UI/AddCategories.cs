@@ -16,5 +16,10 @@ namespace FinalProject.UI_Forms
         {
             InitializeComponent();
         }
+
+        private void addBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
