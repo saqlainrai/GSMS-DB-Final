@@ -583,6 +583,15 @@ DROP COLUMN CheckColumn;
 select * from LookUps
 
 
+-- unique value of Admin is allowed 
+CREATE UNIQUE INDEX UQ_Role ON LoginCredentials(Role) WHERE Role = 'Admin';
+select * from LoginCredentials
+delete from LoginCredentials where id = 1007
+insert into LoginCredentials values('a', '2', 'Employee');
+
+
+
+
 
 
 

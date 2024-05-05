@@ -16,7 +16,7 @@ namespace FinalProject.UI_Forms
         public supplier()
         {
             InitializeComponent();
-            OpenChildForm(new addSupplier());
+            OpenChildForm(new addSupplier(this));
         }
         public void OpenChildForm(Form childForm)
         {

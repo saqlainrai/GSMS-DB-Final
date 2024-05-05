@@ -39,8 +39,8 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.fNameBx = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2GradientTileButton1 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.tableLayoutPanel1.SuspendLayout();
@@ -173,6 +173,7 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 28;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView1.SelectionChanged += new System.EventHandler(this.guna2DataGridView1_SelectionChanged);
             // 
             // tableLayoutPanel3
             // 
@@ -189,8 +190,8 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.20253F));
             this.tableLayoutPanel3.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label2, 4, 0);
-            this.tableLayoutPanel3.Controls.Add(this.fNameBx, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.textBox1, 5, 0);
+            this.tableLayoutPanel3.Controls.Add(this.txtUsername, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.txtPassword, 5, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 90);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -229,31 +230,31 @@
             this.label2.Text = "Password: ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // fNameBx
+            // txtUsername
             // 
-            this.fNameBx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtUsername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.fNameBx.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fNameBx.Location = new System.Drawing.Point(280, 2);
-            this.fNameBx.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.fNameBx.Multiline = true;
-            this.fNameBx.Name = "fNameBx";
-            this.fNameBx.Size = new System.Drawing.Size(217, 26);
-            this.fNameBx.TabIndex = 21;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(280, 2);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsername.Multiline = true;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(217, 26);
+            this.txtUsername.TabIndex = 21;
             // 
-            // textBox1
+            // txtPassword
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(654, 2);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(218, 26);
-            this.textBox1.TabIndex = 22;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(654, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPassword.Multiline = true;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(218, 26);
+            this.txtPassword.TabIndex = 22;
+            this.txtPassword.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tableLayoutPanel4
             // 
@@ -293,6 +294,7 @@
             this.guna2GradientTileButton1.Size = new System.Drawing.Size(203, 41);
             this.guna2GradientTileButton1.TabIndex = 0;
             this.guna2GradientTileButton1.Text = "UPDATE";
+            this.guna2GradientTileButton1.Click += new System.EventHandler(this.guna2GradientTileButton1_Click);
             // 
             // credentials
             // 
@@ -326,8 +328,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox fNameBx;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton1;
     }
