@@ -21,6 +21,8 @@ namespace FinalProject.UI_Forms
             InitializeComponent();
             promptData();
             this.parentForm = parentForm;
+            dataGridView1.ColumnHeadersHeight = 25;
+            label6.Location = new Point(17, 6);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -41,6 +43,38 @@ namespace FinalProject.UI_Forms
             DataTable dataTable = new DataTable();
             da.Fill(dataTable);
             dataGridView1.DataSource = dataTable;
+        }
+        private void fillComboBoxes()
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dataGridView1.SelectedRows[0].Index;
+
+                DataGridViewRow selectedRow = dataGridView1.Rows[selectedIndex];
+
+                string name = selectedRow.Cells["Name"].Value.ToString();
+                string fname = selectedRow.Cells["FName"].Value.ToString();
+                string account = selectedRow.Cells["AccountNo"].Value.ToString();
+                string contact = selectedRow.Cells["Contact"].Value.ToString();
+                string email = selectedRow.Cells["Email"].Value.ToString();
+                string salary = selectedRow.Cells["Salary"].Value.ToString();
+                string address = selectedRow.Cells["Address"].Value.ToString();
+                int tupleKey = Convert.ToInt32(selectedRow.Cells["Id"].Value.ToString());
+
+                textBox1.Text = name;
+                textBox2.Text = fname;
+                textBox3.Text = account;
+                textBox4.Text = contact;
+                textBox5.Text = email;
+                textBox6.Text = salary;
+                //comboBox1 /////////////////check how to clear a combo box
+                richTextBox1.Text = address;
+            }
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            fillComboBoxes();
         }
     }
 }

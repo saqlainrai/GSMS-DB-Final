@@ -81,6 +81,7 @@ namespace FinalProject.UI_Forms
             button4.Visible = true;
             button3.Visible = true;
 
+            comboBox1.Items.Clear();
             string date = comboBox1.Text;
             int id = returnAttendanceId(date);
             var con = Configuration.getInstance().getConnection();
