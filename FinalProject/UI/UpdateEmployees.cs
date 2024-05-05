@@ -28,11 +28,7 @@ namespace FinalProject.UI_Forms
 
         }
 
-        private void addBtn_Click(object sender, EventArgs e)
-        {
-            //it is update Btn
-
-        }
+        
         void promptData()
         {
             var con = Configuration.getInstance().getConnection();
@@ -41,6 +37,16 @@ namespace FinalProject.UI_Forms
             DataTable dataTable = new DataTable();
             da.Fill(dataTable);
             employeesDG.DataSource = dataTable;
+        }
+
+        private void tableLayoutPanel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void UpdateEmployees_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
