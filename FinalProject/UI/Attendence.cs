@@ -28,7 +28,12 @@ namespace FinalProject.UI_Forms
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dataTable = new DataTable();
             da.Fill(dataTable);
-            dataGridView1.DataSource = dataTable;
+            AttendenceDG.DataSource = dataTable;
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

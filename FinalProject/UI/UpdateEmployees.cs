@@ -40,7 +40,7 @@ namespace FinalProject.UI_Forms
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dataTable = new DataTable();
             da.Fill(dataTable);
-            dataGridView1.DataSource = dataTable;
+            employeesDG.DataSource = dataTable;
         }
     }
 }

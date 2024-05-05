@@ -31,7 +31,12 @@ namespace FinalProject.UI_Forms
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dataTable = new DataTable();
             da.Fill(dataTable);
-            guna2DataGridView1.DataSource = dataTable;
+            credentialsDG.DataSource = dataTable;
+        }
+
+        private void credentialsDG_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
