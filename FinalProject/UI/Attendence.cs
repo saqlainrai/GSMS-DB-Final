@@ -19,7 +19,6 @@ namespace FinalProject.UI_Forms
         public Attendence()
         {
             InitializeComponent();
-            promptData();
             button1.Visible = false;
             button2.Visible = false;
             comboBox1.Visible = false;
@@ -27,6 +26,7 @@ namespace FinalProject.UI_Forms
             dateTimePicker1.Visible = false;
             dateTimePicker1.Value = DateTime.Now;
             comboBox2.SelectedIndex = 0;
+            promptData();
         }
         void promptData()
         {
@@ -42,7 +42,7 @@ namespace FinalProject.UI_Forms
         private void button4_Click(object sender, EventArgs e)
         {
             //Select Previous Attendance
-
+            comboBox1.Items.Clear();
             var c = Configuration.getInstance().getConnection();
             SqlCommand cm = new SqlCommand("SELECT Date, Shift FROM Attendances", c);
             SqlDataAdapter d = new SqlDataAdapter(cm);
@@ -81,16 +81,26 @@ namespace FinalProject.UI_Forms
             button4.Visible = true;
             button3.Visible = true;
 
-            comboBox1.Items.Clear();
             string date = comboBox1.Text;
             int id = returnAttendanceId(date);
             var con = Configuration.getInstance().getConnection();
-            SqlCommand cmd = new SqlCommand("SELECT e.Status, m.Id, m.Name, m.FName, m.Email, m.Contact FROM Attendances a JOIN EmployeeAttendances e ON a.Id = e.AttendanceId JOIN Employees m ON m.Id = e.EmployeeId WHERE a.Id = @id", con);
+            SqlCommand cmd = new SqlCommand("SELECT e.Status Stat, m.Id, m.Name, m.FName, m.Email, m.Contact FROM Attendances a JOIN EmployeeAttendances e ON a.Id = e.AttendanceId JOIN Employees m ON m.Id = e.EmployeeId WHERE a.Id = @id", con);
             cmd.Parameters.AddWithValue("@id", id);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dataTable = new DataTable();
             da.Fill(dataTable);
             dataGridView1.DataSource = dataTable;
+            dataGridView1.Columns["Stat"].Visible = false;
+            foreach (DataGridViewRow dr in dataGridView1.Rows)
+            {
+                int stat = Convert.ToInt32(dr.Cells["Stat"].Value);
+
+                // Assuming the ComboBox column index is 0
+                DataGridViewComboBoxCell comboBoxCell = dr.Cells["Status"] as DataGridViewComboBoxCell;
+
+                // Set the selected item based on the integer value
+                comboBoxCell.Value = comboBoxCell.Items[stat - 3]; // Assumes the integer 
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -100,6 +110,12 @@ namespace FinalProject.UI_Forms
             comboBox2.Visible = false;
             button4.Visible = true;
             button3.Visible = true;
+            foreach (DataGridViewRow dr in dataGridView1.Rows)
+            {
+                DataGridViewComboBoxCell comboBoxCell = dr.Cells["Status"] as DataGridViewComboBoxCell;
+
+                comboBoxCell.Value = comboBoxCell.Items[0];
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -125,7 +141,7 @@ namespace FinalProject.UI_Forms
                 cmd.ExecuteNonQuery();
                 //MessageBox.Show("Class Attendance Added SUccessfully!");
 
-                int classID = returnAttendanceId(selectedDate+","+shift);
+                int classID = returnAttendanceId(selectedDate + "," + shift);
                 InsertEmployeeAttendaces(classID);
             }
             else
@@ -174,7 +190,6 @@ namespace FinalProject.UI_Forms
         {
             try
             {
-                string registration = "";
                 int eID = 0;
                 foreach (DataGridViewRow row in this.dataGridView1.Rows)
                 {
@@ -215,10 +230,59 @@ namespace FinalProject.UI_Forms
             cmd.Parameters.AddWithValue("@stat", status);
             cmd.ExecuteNonQuery();
         }
+        private void UpdateIndividualEmployee(int employeeId, int classID, int status)
+        {
+            var con = Configuration.getInstance().getConnection();
+            string query = "Update EmployeeAttendances SET Status = @status WHERE AttendanceId = @attID and EmployeeId = @empID";
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@attID", classID);
+            cmd.Parameters.AddWithValue("@empID", employeeId);
+            cmd.Parameters.AddWithValue("@status", status);
+            cmd.ExecuteNonQuery();
+        }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (comboBox1.Text != "")
+            {
+                string date = comboBox1.Text;
+                int attendanceId = returnAttendanceId(date);
+                try
+                {
+                    int eID = 0;
+                    foreach (DataGridViewRow row in this.dataGridView1.Rows)
+                    {
+                        eID = (int)row.Cells[2].Value;
 
+                        if (row.Cells[0].Value.ToString() == "PRESENT")
+                        {
+                            UpdateIndividualEmployee(eID, attendanceId, 3);
+                        }
+                        else if (row.Cells[0].Value.ToString() == "ABSENT")
+                        {
+                            UpdateIndividualEmployee(eID, attendanceId, 4);
+                        }
+                        else if (row.Cells[0].Value.ToString() == "LATE")
+                        {
+                            UpdateIndividualEmployee(eID, attendanceId, 5);
+                        }
+                        else if (row.Cells[0].Value.ToString() == "LEAVE")
+                        {
+                            UpdateIndividualEmployee(eID, attendanceId, 6);
+                        }
+                    }
+                    MessageBox.Show("Attendance has been Updated Successfully for the Selected Date.");
+                    this.dataGridView1.DataSource = null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please Select an Attendace to Update!!!");
+            }
         }
     }
 }
