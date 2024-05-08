@@ -74,19 +74,62 @@ namespace FinalProject.UI_Forms
                                     SqlCommand cmd;
                                     if (txtEmail.Text.Length > 0)
                                     {
-                                        cmd = new SqlCommand("Insert into Customers values (3, @Name, @FName, @CNIC, @Contact, @Email, @Profession, @Address)", con);
+                                        if (txtCNIC.Text.Length > 0)
+                                        {
+                                            if (txtAddress.Text.Length > 0)
+                                            {
+                                                cmd = new SqlCommand("Insert into Customers values (3, @Name, @FName, @CNIC, @Contact, @Email, @Profession, @Address)", con);
+                                                cmd.Parameters.AddWithValue("@CNIC", cnic);
+                                                cmd.Parameters.AddWithValue("@Email", email);
+                                                cmd.Parameters.AddWithValue("@Address", address);
+                                            }
+                                            else
+                                            {
+                                                cmd = new SqlCommand("Insert into Customers values (3, @Name, @FName, @CNIC, @Contact, @Email, @Profession, NULL)", con);
+                                                cmd.Parameters.AddWithValue("@CNIC", cnic);
+                                                cmd.Parameters.AddWithValue("@Email", email);
+                                            }
+                                        }
+                                        else if (txtAddress.Text.Length > 0)
+                                        {
+                                            cmd = new SqlCommand("Insert into Customers values (3, @Name, @FName, NULL, @Contact, @Email, @Profession, @Address)", con);
+                                            cmd.Parameters.AddWithValue("@Email", email);
+                                            cmd.Parameters.AddWithValue("@Address", address);
+                                        }
+                                        else
+                                        {
+                                            cmd = new SqlCommand("Insert into Customers values (3, @Name, @FName, NULL, @Contact, @Email, @Profession, NULL)", con);
+                                            cmd.Parameters.AddWithValue("@Email", email);
+                                        }
                                     }
-                                    else
+                                    else if (txtCNIC.Text.Length > 0)
                                     {
-                                        cmd = new SqlCommand("Insert into Customers values (3, @Name, @FName, @CNIC, @Contact, NULL, @Profession, @Address)", con);
+                                        if (txtAddress.Text.Length > 0)
+                                        {
+                                            cmd = new SqlCommand("Insert into Customers values (3, @Name, @FName, @CNIC, @Contact, NULL, @Profession, @Address)", con);
+                                            cmd.Parameters.AddWithValue("@CNIC", cnic);
+                                            cmd.Parameters.AddWithValue("@Address", address);
+                                        }
+                                        else
+                                        {
+                                            cmd = new SqlCommand("Insert into Customers values (3, @Name, @FName, @CNIC, @Contact, NULL, @Profession, NULL)", con);
+                                            cmd.Parameters.AddWithValue("@CNIC", cnic);
+                                            cmd.Parameters.AddWithValue("@Email", email);
+                                        }
+                                    }
+                                    else if (txtAddress.Text.Length > 0)
+                                    {
+                                        cmd = new SqlCommand("Insert into Customers values (3, @Name, @FName, NULL, @Contact, NULL, @Profession, @Address)", con);
+                                        cmd.Parameters.AddWithValue("@Address", address);
+                                    }
+                                    else 
+                                    { 
+                                        cmd = new SqlCommand("Insert into Customers values (3, @Name, @FName, NULL, @Contact, NULL, @Profession, NULL)", con);
                                     }
                                     cmd.Parameters.AddWithValue("@Name", name);
-                                    cmd.Parameters.AddWithValue("@FName", fname);
-                                    cmd.Parameters.AddWithValue("@CNIC", cnic);
+                                    cmd.Parameters.AddWithValue("@FName", fname);                                    
                                     cmd.Parameters.AddWithValue("@Contact", contact);
-                                    cmd.Parameters.AddWithValue("@Email", email);
                                     cmd.Parameters.AddWithValue("@Profession", profession);
-                                    cmd.Parameters.AddWithValue("@Address", address);
                                     cmd.ExecuteNonQuery();
                                     MessageBox.Show("The data is Successfully Saved!!!");
                                     txtName.Clear();
