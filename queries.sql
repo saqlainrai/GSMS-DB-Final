@@ -590,7 +590,7 @@ delete from LoginCredentials where id = 1007
 insert into LoginCredentials values('a', '2', 'Employee');
 
 
-
+select * from Suppliers where cnic = 'NULL'
 
 
 
