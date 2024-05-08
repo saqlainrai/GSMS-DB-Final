@@ -67,7 +67,6 @@ namespace FinalProject.UI_Forms
                 textBox4.Text = contact;
                 textBox5.Text = email;
                 textBox6.Text = salary;
-                //comboBox1 /////////////////check how to clear a combo box
                 richTextBox1.Text = address;
             }
         }
