@@ -18,11 +18,12 @@ namespace FinalProject.UI_Forms
         {
             InitializeComponent();
             promptData();
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            this.Resize += credentials_Resize;
         }
         void promptData()
         {
@@ -37,6 +38,19 @@ namespace FinalProject.UI_Forms
         private void credentialsDG_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void guna2GradientTileButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void credentials_Resize(object sender, EventArgs e)
+        {
+            float newSize = this.Width * 0.02f; // Adjust this multiplier to suit your needs
+            Font newFont = new Font("Arial", newSize, FontStyle.Regular);
+
+            fNameBx.Font = newFont;
         }
     }
 }
