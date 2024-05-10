@@ -15,10 +15,12 @@ namespace FinalProject.UI_Forms
     public partial class addSupplier : Form
     {
         Form parentForm;
-        public addSupplier(Form parentForm)
+        public string actorid;
+        public addSupplier(supplier parentForm, string id)
         {
             InitializeComponent();
             this.parentForm = parentForm;
+            this.actorid = id;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -65,29 +67,30 @@ namespace FinalProject.UI_Forms
                                 {
                                     if (richTextBox2.Text.Length > 0)
                                     {
-                                        cmd = new SqlCommand("Insert into Suppliers values (@Name, @Contact, @Email, @Address, 3,  @Description, 1)", con);
+                                        cmd = new SqlCommand("Insert into Suppliers values (@Name, @Contact, @Email, @Address, @registeredby,  @Description, 1)", con);
                                         cmd.Parameters.AddWithValue("@Address", address);
                                         cmd.Parameters.AddWithValue("@Description", description);
 
                                     }
                                     else
                                     {
-                                        cmd = new SqlCommand("Insert into Suppliers values (@Name, @Contact, @Email, @Address, 3,  NULL, 1)", con);
+                                        cmd = new SqlCommand("Insert into Suppliers values (@Name, @Contact, @Email, @Address, @registeredby,  NULL, 1)", con);
                                         cmd.Parameters.AddWithValue("@Address", address);                                        
                                     }
                                 }
                                 else if (richTextBox2.Text.Length > 0)
                                 {
-                                    cmd = new SqlCommand("Insert into Suppliers values (@Name, @Contact, @Email, NULL, 3,  @Description, 1)", con);
+                                    cmd = new SqlCommand("Insert into Suppliers values (@Name, @Contact, @Email, NULL, @registeredby,  @Description, 1)", con);
                                     cmd.Parameters.AddWithValue("@Description", description);
                                 }
                                 else
                                 {
-                                    cmd = new SqlCommand("Insert into Suppliers values (@Name, @Contact, @Email, NULL, 3,  NULL, 1)", con);                                    
+                                    cmd = new SqlCommand("Insert into Suppliers values (@Name, @Contact, @Email, NULL, @registeredby,  NULL, 1)", con);                                    
                                 }
                                 cmd.Parameters.AddWithValue("@Name", name);
                                 cmd.Parameters.AddWithValue("@Contact", contact);
                                 cmd.Parameters.AddWithValue("@Email", email);
+                                cmd.Parameters.AddWithValue("@registeredby", this.actorid);
                                 cmd.ExecuteNonQuery();
                                 MessageBox.Show("The data is Successfully Saved!!!");
                                 textBox1.Clear();

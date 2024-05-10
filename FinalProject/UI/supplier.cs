@@ -13,10 +13,12 @@ namespace FinalProject.UI_Forms
     public partial class supplier : Form
     {
         Form activeForm = null;
-        public supplier()
+        public string actorId;
+        public supplier(string id)
         {
             InitializeComponent();
-            OpenChildForm(new addSupplier(this));
+            OpenChildForm(new addSupplier(this, id));
+            this.actorId = id;
         }
         public void OpenChildForm(Form childForm)
         {
@@ -34,7 +36,7 @@ namespace FinalProject.UI_Forms
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new addSupplier(this));
+            OpenChildForm(new addSupplier(this, actorId));
         }
 
         private void updateBtn_Click(object sender, EventArgs e)

@@ -16,10 +16,12 @@ namespace FinalProject.UI_Forms
         Color defaultButtonColor = Color.FromArgb(33, 11, 97); // Example default color
         Color activeButtonColor = Color.FromArgb(75, 8, 138);  // Example active color
         Form parentForm;
-        public EmployeeDashBoard(Form parent)
+        string userId;
+        public EmployeeDashBoard(Form parent, string id)
         {
             InitializeComponent();
             parentForm = parent;
+            this.userId = id;
         }
         public void OpenChildForm(Form childForm)
         {
@@ -45,7 +47,7 @@ namespace FinalProject.UI_Forms
         }
         private void customersBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new customers());
+            OpenChildForm(new customers(this.userId));
             customersBtn.BackColor = activeButtonColor;
         }
 
@@ -57,7 +59,7 @@ namespace FinalProject.UI_Forms
 
         private void supplierBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new supplier());
+            OpenChildForm(new supplier(this.userId));
             supplierBtn.BackColor = activeButtonColor;  
         }
 

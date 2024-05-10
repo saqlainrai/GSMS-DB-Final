@@ -13,10 +13,12 @@ namespace FinalProject.UI_Forms
     public partial class customers : Form
     {
         Form activeForm = null;
-        public customers()
+        string actorId;
+        public customers(string id)
         {
             InitializeComponent();
-            OpenChildForm(new AddCustomers(this));
+            OpenChildForm(new AddCustomers(this, id));
+            this.actorId = id;
         }
         public void OpenChildForm(Form childForm)
         {
@@ -33,7 +35,7 @@ namespace FinalProject.UI_Forms
         }
         private void addBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new AddCustomers(this));
+            OpenChildForm(new AddCustomers(this, actorId));
         }
 
         private void updateBtn_Click(object sender, EventArgs e)
