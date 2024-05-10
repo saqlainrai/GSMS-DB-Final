@@ -58,7 +58,7 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AttendenceDG)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -99,7 +99,7 @@
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(972, 44);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(1094, 58);
             this.tableLayoutPanel8.TabIndex = 5;
             // 
             // btnUpdate
@@ -160,7 +160,7 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(972, 43);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1094, 53);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
             // tableLayoutPanel14
@@ -177,7 +177,7 @@
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 1;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(478, 35);
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(539, 43);
             this.tableLayoutPanel14.TabIndex = 2;
             // 
             // button3
@@ -190,10 +190,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(147, 0);
+            this.button3.Location = new System.Drawing.Point(165, 0);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(327, 35);
+            this.button3.Size = new System.Drawing.Size(370, 43);
             this.button3.TabIndex = 0;
             this.button3.Text = "Choose Date For Attendance";
             this.button3.UseVisualStyleBackColor = false;
@@ -276,7 +276,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(972, 43);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1094, 53);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // tableLayoutPanel13
@@ -293,7 +293,7 @@
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 1;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(478, 35);
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(539, 43);
             this.tableLayoutPanel13.TabIndex = 1;
             // 
             // button4
@@ -306,10 +306,10 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(147, 0);
+            this.button4.Location = new System.Drawing.Point(165, 0);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(327, 35);
+            this.button4.Size = new System.Drawing.Size(370, 43);
             this.button4.TabIndex = 1;
             this.button4.Text = "Select Previous Attendance";
             this.button4.UseVisualStyleBackColor = false;
@@ -330,7 +330,7 @@
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(478, 35);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(539, 43);
             this.tableLayoutPanel9.TabIndex = 0;
             // 
             // button1
@@ -345,10 +345,10 @@
             this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(337, 2);
+            this.button1.Location = new System.Drawing.Point(380, 2);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 31);
+            this.button1.Size = new System.Drawing.Size(156, 39);
             this.button1.TabIndex = 50;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = false;
@@ -363,10 +363,10 @@
             this.comboBox1.Location = new System.Drawing.Point(4, 4);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(326, 24);
+            this.comboBox1.Size = new System.Drawing.Size(369, 28);
             this.comboBox1.TabIndex = 0;
             // 
-            // dataGridView1
+            // AttendenceDG
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
@@ -436,9 +436,9 @@
             // 
             // Attendence
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(980, 460);
+            this.ClientSize = new System.Drawing.Size(1102, 575);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Attendence";
@@ -451,7 +451,7 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel13.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AttendenceDG)).EndInit();
             this.ResumeLayout(false);
 
         }

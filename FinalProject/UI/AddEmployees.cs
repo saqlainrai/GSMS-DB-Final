@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -31,8 +32,11 @@ namespace FinalProject.UI_Forms
             string email = mailBx.Text;
             float salary = float.Parse(salaryBx.Text);
             string account = accountBx.Text;
+            float salary = float.Parse(salaryBx.Text);
+            string account = accountBx.Text;
             string address = addressBx.Text;
             string contact = contactBx.Text;
+            bool userFlag = false;
             bool userFlag = false;
 
             if (YeschkBx.Checked)

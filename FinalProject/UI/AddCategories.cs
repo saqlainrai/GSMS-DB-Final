@@ -141,5 +141,10 @@ namespace FinalProject.UI_Forms
             }
             comboBox1.SelectedIndex = 0;
         }
+
+        private void addBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

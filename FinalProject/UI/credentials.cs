@@ -20,6 +20,7 @@ namespace FinalProject.UI_Forms
         {
             InitializeComponent();
             promptData();
+
         }
         void fillTextBoxes()
         {
@@ -40,7 +41,7 @@ namespace FinalProject.UI_Forms
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            this.Resize += credentials_Resize;
         }
         void promptData()
         {
@@ -73,6 +74,14 @@ namespace FinalProject.UI_Forms
         private void guna2DataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             fillTextBoxes();
+
+        }
+
+        private void credentials_Resize(object sender, EventArgs e)
+        {
+            float newSize = this.Width * 0.02f; // Adjust this multiplier to suit your needs
+            Font newFont = new Font("Arial", newSize, FontStyle.Regular);
+            fNameBx.Font = newFont;
         }
     }
 }
