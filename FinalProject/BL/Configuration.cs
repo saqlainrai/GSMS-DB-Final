@@ -9,7 +9,7 @@ namespace FinalProject.BL
 {
     class Configuration
     {
-        String ConnectionStr = @"Data Source=(local);Initial Catalog=GSMS;Integrated Security=True";
+        String ConnectionStr = @"Data Source=(local);Initial Catalog=plag;Integrated Security=True";
         //                             Add the name of database here (^^^) Just and leave the rest, here it is "plag"
         SqlConnection con;
         private static Configuration _instance;

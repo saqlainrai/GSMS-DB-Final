@@ -19,7 +19,7 @@ namespace FinalProject.UI_Forms
         {
             InitializeComponent();
             promptData();
-            dataGridView1.ColumnHeadersHeight = 25;
+            discountsDG.ColumnHeadersHeight = 25;
         }
         private void promptData()
         {
@@ -28,19 +28,19 @@ namespace FinalProject.UI_Forms
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             DataTable dataTable = new DataTable();
             adapter.Fill(dataTable);
-            dataGridView1.DataSource = dataTable;
+            discountsDG.DataSource = dataTable;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             // delete button
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (discountsDG.SelectedRows.Count > 0)
             {
                 try
                 {
-                    int selectedIndex = dataGridView1.SelectedRows[0].Index;
+                    int selectedIndex = discountsDG.SelectedRows[0].Index;
 
-                    DataGridViewRow selectedRow = dataGridView1.Rows[selectedIndex];
+                    DataGridViewRow selectedRow = discountsDG.Rows[selectedIndex];
 
                     int id = Convert.ToInt32(selectedRow.Cells["Id"].Value);
 
@@ -60,10 +60,10 @@ namespace FinalProject.UI_Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (discountsDG.SelectedRows.Count > 0)
             {
-                int selectedIndex = dataGridView1.SelectedRows[0].Index;
-                DataGridViewRow selectedRow = dataGridView1.Rows[selectedIndex];
+                int selectedIndex = discountsDG.SelectedRows[0].Index;
+                DataGridViewRow selectedRow = discountsDG.Rows[selectedIndex];
                 string discountId = selectedRow.Cells["Id"].Value.ToString();
 
                 // update button
@@ -250,10 +250,10 @@ namespace FinalProject.UI_Forms
         }
         private void fillComboBoxes()
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (discountsDG.SelectedRows.Count > 0)
             {
-                int selectedIndex = dataGridView1.SelectedRows[0].Index;
-                DataGridViewRow selectedRow = dataGridView1.Rows[selectedIndex];
+                int selectedIndex = discountsDG.SelectedRows[0].Index;
+                DataGridViewRow selectedRow = discountsDG.Rows[selectedIndex];
                 
                 string name = selectedRow.Cells["Name"].Value.ToString();
                 string coupon = selectedRow.Cells["CouponCode"].Value.ToString();

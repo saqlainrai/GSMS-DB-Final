@@ -36,7 +36,7 @@ namespace FinalProject.UI_Forms
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dataTable = new DataTable();
             da.Fill(dataTable);
-            AttendenceDG.DataSource = dataTable;
+            dataGridView1.DataSource = dataTable;
         }
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -110,6 +110,7 @@ namespace FinalProject.UI_Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
+            promptData();
             button2.Visible = false;
             dateTimePicker1.Visible = false;
             comboBox2.Visible = false;

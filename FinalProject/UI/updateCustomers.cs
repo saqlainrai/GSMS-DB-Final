@@ -35,7 +35,7 @@ namespace FinalProject.UI_Forms
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dataTable = new DataTable();
             da.Fill(dataTable);
-            customersDG.DataSource = dataTable;
+            dataGridView1.DataSource = dataTable;
         }
 
         private void button3_Click(object sender, EventArgs e)

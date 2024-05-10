@@ -19,8 +19,8 @@ namespace FinalProject.UI_Forms
             InitializeComponent();
             fillComboBox();
             promptData();
-            dataGridView1.ColumnHeadersHeight = 25;
-            dataGridView2.ColumnHeadersHeight = 25;
+            categoriesDG.ColumnHeadersHeight = 25;
+            subCategoriesDG.ColumnHeadersHeight = 25;
         }
         private void promptData()
         {
@@ -29,21 +29,21 @@ namespace FinalProject.UI_Forms
             SqlDataAdapter d = new SqlDataAdapter(cmd);
             DataTable dataTable = new DataTable();
             d.Fill(dataTable);
-            dataGridView1.DataSource = dataTable;
+            categoriesDG.DataSource = dataTable;
 
             var c = Configuration.getInstance().getConnection();
             SqlCommand cm = new SqlCommand("SELECT * FROM SubCategories", c);
             SqlDataAdapter da = new SqlDataAdapter(cm);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            dataGridView2.DataSource = dt;
+            subCategoriesDG.DataSource = dt;
         }
         private void button1_Click(object sender, EventArgs e)
         {
             // update Categories
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (categoriesDG.SelectedRows.Count > 0)
             {
-                int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Id"].Value);
+                int id = Convert.ToInt32(categoriesDG.SelectedRows[0].Cells["Id"].Value);
                 string name = textBox1.Text;
                 string description = richTextBox1.Text;
                 if (name != "")
@@ -78,9 +78,9 @@ namespace FinalProject.UI_Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (dataGridView2.SelectedRows.Count > 0)
+            if (subCategoriesDG.SelectedRows.Count > 0)
             {
-                int id = Convert.ToInt32(dataGridView2.SelectedRows[0].Cells["Id"].Value);
+                int id = Convert.ToInt32(subCategoriesDG.SelectedRows[0].Cells["Id"].Value);
                 string name = textBox2.Text;
                 string category = comboBox1.SelectedText;
                 int categoryid = findCategoryId(category);
@@ -161,10 +161,10 @@ namespace FinalProject.UI_Forms
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (categoriesDG.SelectedRows.Count > 0)
             {
-                string name = dataGridView1.SelectedRows[0].Cells["Name"].Value.ToString();
-                string desc = dataGridView1.SelectedRows[0].Cells["Description"].Value.ToString();
+                string name = categoriesDG.SelectedRows[0].Cells["Name"].Value.ToString();
+                string desc = categoriesDG.SelectedRows[0].Cells["Description"].Value.ToString();
 
                 textBox1.Text = name;
                 richTextBox1.Text = desc;
@@ -173,12 +173,12 @@ namespace FinalProject.UI_Forms
 
         private void dataGridView2_SelectionChanged(object sender, EventArgs e)
         {
-            if (dataGridView2.SelectedRows.Count > 0)
+            if (subCategoriesDG.SelectedRows.Count > 0)
             {
-                string name = dataGridView2.SelectedRows[0].Cells["Name"].Value.ToString();
-                int id = Convert.ToInt32(dataGridView2.SelectedRows[0].Cells["CategoryId"].Value);
+                string name = subCategoriesDG.SelectedRows[0].Cells["Name"].Value.ToString();
+                int id = Convert.ToInt32(subCategoriesDG.SelectedRows[0].Cells["CategoryId"].Value);
                 string i = findName(id);
-                string desc = dataGridView2.SelectedRows[0].Cells["Description"].Value.ToString();
+                string desc = subCategoriesDG.SelectedRows[0].Cells["Description"].Value.ToString();
 
                 textBox2.Text = name;
                 richTextBox2.Text = desc;

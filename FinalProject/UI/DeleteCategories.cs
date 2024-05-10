@@ -21,8 +21,8 @@ namespace FinalProject.UI_Forms
         {
             InitializeComponent();
             promptData();
-            dataGridView1.ColumnHeadersHeight = 25;
-            dataGridView2.ColumnHeadersHeight = 25;
+            categoriesDG.ColumnHeadersHeight = 25;
+            subCategoriesDG.ColumnHeadersHeight = 25;
         }
         private void promptData()
         {
@@ -31,23 +31,23 @@ namespace FinalProject.UI_Forms
             SqlDataAdapter d = new SqlDataAdapter(cmd);
             DataTable dataTable = new DataTable();
             d.Fill(dataTable);
-            dataGridView1.DataSource = dataTable;
+            categoriesDG.DataSource = dataTable;
 
             var c = Configuration.getInstance().getConnection();
             SqlCommand cm = new SqlCommand("SELECT * FROM SubCategories", c);
             SqlDataAdapter da = new SqlDataAdapter(cm);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            dataGridView2.DataSource = dt;
+            subCategoriesDG.DataSource = dt;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                if (dataGridView1.SelectedRows.Count > 0)
+                if (categoriesDG.SelectedRows.Count > 0)
                 {
-                    int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Id"].Value);
+                    int id = Convert.ToInt32(categoriesDG.SelectedRows[0].Cells["Id"].Value);
                     var con = Configuration.getInstance().getConnection();
                     SqlCommand cmd = new SqlCommand("Delete from Categories WHERE Id = @id", con);
                     cmd.Parameters.AddWithValue("@id", id);
@@ -73,9 +73,9 @@ namespace FinalProject.UI_Forms
         {
             try
             {
-                if (dataGridView2.SelectedRows.Count > 0)
+                if (subCategoriesDG.SelectedRows.Count > 0)
                 {
-                    int id = Convert.ToInt32(dataGridView2.SelectedRows[0].Cells["Id"].Value);
+                    int id = Convert.ToInt32(subCategoriesDG.SelectedRows[0].Cells["Id"].Value);
                     var con = Configuration.getInstance().getConnection();
                     SqlCommand cmd = new SqlCommand("Delete from SubCategories WHERE Id = @id", con);
                     cmd.Parameters.AddWithValue("@id", id);

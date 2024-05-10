@@ -22,7 +22,7 @@ namespace FinalProject
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new Main(null));
         }
         [DllImport("user32.dll")]
         private static extern bool SetProcessDPIAware();

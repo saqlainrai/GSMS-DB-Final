@@ -24,11 +24,11 @@ namespace FinalProject.UI_Forms
         }
         void fillTextBoxes()
         {
-            if (guna2DataGridView1.SelectedRows.Count > 0)
+            if (credentialsDG.SelectedRows.Count > 0)
             {
-                int selectedIndex = guna2DataGridView1.SelectedRows[0].Index;
+                int selectedIndex = credentialsDG.SelectedRows[0].Index;
 
-                DataGridViewRow selectedRow = guna2DataGridView1.Rows[selectedIndex];
+                DataGridViewRow selectedRow = credentialsDG.Rows[selectedIndex];
 
                 string name = selectedRow.Cells["Username"].Value.ToString();
                 string pass = selectedRow.Cells["Password"].Value.ToString();
@@ -50,13 +50,13 @@ namespace FinalProject.UI_Forms
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dataTable = new DataTable();
             da.Fill(dataTable);
-            guna2DataGridView1.DataSource = dataTable;
-            guna2DataGridView1.Columns["ID"].Visible = false;
+            credentialsDG.DataSource = dataTable;
+            credentialsDG.Columns["ID"].Visible = false;
         }
 
         private void guna2GradientTileButton1_Click(object sender, EventArgs e)
         {
-            if (guna2DataGridView1.SelectedRows.Count > 0)
+            if (credentialsDG.SelectedRows.Count > 0)
             {
                 string name = txtUsername.Text;
                 string pass = txtPassword.Text;
@@ -81,7 +81,7 @@ namespace FinalProject.UI_Forms
         {
             float newSize = this.Width * 0.02f; // Adjust this multiplier to suit your needs
             Font newFont = new Font("Arial", newSize, FontStyle.Regular);
-            fNameBx.Font = newFont;
+            //fNameBx.Font = newFont;
         }
     }
 }

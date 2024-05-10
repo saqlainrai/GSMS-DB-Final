@@ -33,7 +33,7 @@ namespace FinalProject.UI_Forms
             DataTable dataTable = new DataTable();
             d.Fill(dataTable);
             dataGridView1.DataSource = dataTable;
-            
+
             var c = Configuration.getInstance().getConnection();
             SqlCommand cm = new SqlCommand("SELECT * FROM SubCategories", c);
             SqlDataAdapter da = new SqlDataAdapter(cm);
@@ -108,7 +108,7 @@ namespace FinalProject.UI_Forms
             var con = Configuration.getInstance().getConnection();
             SqlCommand cmd = new SqlCommand("SELECT Id, Name FROM Categories", con);
             SqlDataAdapter d = new SqlDataAdapter(cmd);
-            DataTable dataTable = new DataTable();        
+            DataTable dataTable = new DataTable();
             d.Fill(dataTable);
             List<string> columnEntries = new List<string>();
             foreach (DataRow row in dataTable.Rows)
@@ -140,11 +140,6 @@ namespace FinalProject.UI_Forms
                 comboBox1.Items.Add(row["Name"].ToString());
             }
             comboBox1.SelectedIndex = 0;
-        }
-
-        private void addBtn_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
