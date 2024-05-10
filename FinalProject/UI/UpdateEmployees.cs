@@ -221,7 +221,6 @@ namespace FinalProject.UI_Forms
                     MessageBox.Show("Please Enter a valid Name!!!");
                 }
             }
-
         }
         void promptData()
         {
@@ -278,20 +277,27 @@ namespace FinalProject.UI_Forms
 
         private void delBtn_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            try
             {
-                int selectedIndex = dataGridView1.SelectedRows[0].Index;
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    int selectedIndex = dataGridView1.SelectedRows[0].Index;
 
-                DataGridViewRow selectedRow = dataGridView1.Rows[selectedIndex];
+                    DataGridViewRow selectedRow = dataGridView1.Rows[selectedIndex];
 
-                int id = Convert.ToInt32(selectedRow.Cells["Id"].Value);
+                    int id = Convert.ToInt32(selectedRow.Cells["Id"].Value);
 
-                var con = Configuration.getInstance().getConnection();
-                SqlCommand cmd = new SqlCommand("Delete from Employees Where Id = @id", con);
-                cmd.Parameters.AddWithValue("@id", id);
-                cmd.ExecuteNonQuery();
-                promptData();
-                MessageBox.Show("The Data is deleted Successfully!!!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    var con = Configuration.getInstance().getConnection();
+                    SqlCommand cmd = new SqlCommand("Delete from Employees Where Id = @id", con);
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.ExecuteNonQuery();
+                    promptData();
+                    MessageBox.Show("The Data is deleted Successfully!!!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
