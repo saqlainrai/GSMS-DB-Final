@@ -70,7 +70,6 @@ namespace FinalProject.UI_Forms
                                         cmd = new SqlCommand("Insert into Suppliers values (@Name, @Contact, @Email, @Address, @registeredby,  @Description, 1)", con);
                                         cmd.Parameters.AddWithValue("@Address", address);
                                         cmd.Parameters.AddWithValue("@Description", description);
-
                                     }
                                     else
                                     {
