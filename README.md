@@ -8,6 +8,7 @@ Session: 2022 – 2026
 - Saqlain Mansab 2022-CS-80 
 - Zulqarnain Akram 2022-CS-84 
 
+### Completed
 
 ### Supervised by: 
 Mr. Nazeef Ul Haq 
