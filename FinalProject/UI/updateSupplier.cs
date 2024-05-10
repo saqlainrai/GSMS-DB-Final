@@ -31,6 +31,7 @@ namespace FinalProject.UI_Forms
             da.Fill(dataTable);
             dataGridView1.DataSource = dataTable;
             dataGridView1.Columns["Status"].Visible = false;
+            dataGridView1.Columns["RegisteredBy"].Visible = false;
         }
         private void fillComboBoxes()
         {

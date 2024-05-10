@@ -38,6 +38,7 @@
             this.delBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.removeChkBx = new System.Windows.Forms.RadioButton();
             this.assignChkBx = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
@@ -67,7 +68,6 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.dataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.removeChkBx = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDG)).BeginInit();
             this.tableLayoutPanel8.SuspendLayout();
@@ -184,7 +184,7 @@
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(1082, 49);
             this.tableLayoutPanel8.TabIndex = 5;
             // 
@@ -270,6 +270,23 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(533, 39);
             this.tableLayoutPanel3.TabIndex = 3;
+            // 
+            // removeChkBx
+            // 
+            this.removeChkBx.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.removeChkBx.AutoSize = true;
+            this.removeChkBx.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removeChkBx.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.removeChkBx.Location = new System.Drawing.Point(349, 0);
+            this.removeChkBx.Margin = new System.Windows.Forms.Padding(4, 0, 4, 4);
+            this.removeChkBx.Name = "removeChkBx";
+            this.removeChkBx.Size = new System.Drawing.Size(180, 35);
+            this.removeChkBx.TabIndex = 4;
+            this.removeChkBx.TabStop = true;
+            this.removeChkBx.Text = "REMOVE";
+            this.removeChkBx.UseVisualStyleBackColor = true;
             // 
             // assignChkBx
             // 
@@ -707,23 +724,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1090, 465);
             this.tableLayoutPanel1.TabIndex = 4;
-            // 
-            // removeChkBx
-            // 
-            this.removeChkBx.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.removeChkBx.AutoSize = true;
-            this.removeChkBx.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removeChkBx.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.removeChkBx.Location = new System.Drawing.Point(349, 0);
-            this.removeChkBx.Margin = new System.Windows.Forms.Padding(4, 0, 4, 4);
-            this.removeChkBx.Name = "removeChkBx";
-            this.removeChkBx.Size = new System.Drawing.Size(180, 35);
-            this.removeChkBx.TabIndex = 4;
-            this.removeChkBx.TabStop = true;
-            this.removeChkBx.Text = "REMOVE";
-            this.removeChkBx.UseVisualStyleBackColor = true;
             // 
             // UpdateEmployees
             // 

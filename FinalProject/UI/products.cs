@@ -31,19 +31,5 @@ namespace FinalProject.UI_Forms
             childForm.BringToFront();
             childForm.Show();
         }
-        private void addBtn_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new AddProducts());
-        }
-
-        private void updateBtn_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new updateProducts());
-        }
-
-        private void delBtn_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new deleteProducts());
-        }
     }
 }
