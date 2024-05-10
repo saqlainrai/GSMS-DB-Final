@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using FinalProject.BL;
 using FinalProject.DL;
 
@@ -24,7 +26,6 @@ namespace FinalProject.UI_Forms
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-
             // user id and address can be null
             string name = nameBx.Text;
             string fname = fNameBx.Text;
@@ -132,7 +133,7 @@ namespace FinalProject.UI_Forms
                                         nameBx.Clear();
                                         fNameBx.Clear();
                                         accountBx.Clear();
-                                        //salaryBx.Value = 0;
+                                        salaryBx.Value = 0;
                                         mailBx.Clear();
                                         contactBx.Clear();
                                         addressBx.Clear();
@@ -174,9 +175,6 @@ namespace FinalProject.UI_Forms
             {
                 MessageBox.Show("Please Enter a valid Name!!!");
             }
-
-        
-
+        }
     }
-}
 }

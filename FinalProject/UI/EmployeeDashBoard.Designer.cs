@@ -62,10 +62,10 @@
             this.customersBtn.Image = global::FinalProject.Properties.Resources.customers;
             this.customersBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.customersBtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.customersBtn.Location = new System.Drawing.Point(3, 147);
+            this.customersBtn.Location = new System.Drawing.Point(3, 217);
             this.customersBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.customersBtn.Name = "customersBtn";
-            this.customersBtn.Size = new System.Drawing.Size(238, 29);
+            this.customersBtn.Size = new System.Drawing.Size(238, 45);
             this.customersBtn.TabIndex = 4;
             this.customersBtn.Text = "Customers";
             this.customersBtn.Click += new System.EventHandler(this.customersBtn_Click);
@@ -79,7 +79,7 @@
             this.flowPanel.Location = new System.Drawing.Point(244, 63);
             this.flowPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowPanel.Name = "flowPanel";
-            this.flowPanel.Size = new System.Drawing.Size(751, 416);
+            this.flowPanel.Size = new System.Drawing.Size(1059, 611);
             this.flowPanel.TabIndex = 13;
             // 
             // button3
@@ -127,7 +127,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.080807F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.080807F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(244, 416);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(244, 611);
             this.tableLayoutPanel1.TabIndex = 11;
             // 
             // homeBtn
@@ -148,10 +148,10 @@
             this.homeBtn.Image = global::FinalProject.Properties.Resources.icons8_home_48;
             this.homeBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.homeBtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.homeBtn.Location = new System.Drawing.Point(3, 81);
+            this.homeBtn.Location = new System.Drawing.Point(3, 119);
             this.homeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.homeBtn.Name = "homeBtn";
-            this.homeBtn.Size = new System.Drawing.Size(238, 29);
+            this.homeBtn.Size = new System.Drawing.Size(238, 45);
             this.homeBtn.TabIndex = 2;
             this.homeBtn.Text = "Home";
             this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click);
@@ -174,10 +174,10 @@
             this.supplierBtn.Image = global::FinalProject.Properties.Resources.suplier;
             this.supplierBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.supplierBtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.supplierBtn.Location = new System.Drawing.Point(3, 180);
+            this.supplierBtn.Location = new System.Drawing.Point(3, 266);
             this.supplierBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.supplierBtn.Name = "supplierBtn";
-            this.supplierBtn.Size = new System.Drawing.Size(238, 29);
+            this.supplierBtn.Size = new System.Drawing.Size(238, 45);
             this.supplierBtn.TabIndex = 4;
             this.supplierBtn.Text = "Suppliers";
             this.supplierBtn.Click += new System.EventHandler(this.supplierBtn_Click);
@@ -200,10 +200,10 @@
             this.orderBtn.Image = global::FinalProject.Properties.Resources.order;
             this.orderBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.orderBtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.orderBtn.Location = new System.Drawing.Point(3, 114);
+            this.orderBtn.Location = new System.Drawing.Point(3, 168);
             this.orderBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.orderBtn.Name = "orderBtn";
-            this.orderBtn.Size = new System.Drawing.Size(238, 29);
+            this.orderBtn.Size = new System.Drawing.Size(238, 45);
             this.orderBtn.TabIndex = 4;
             this.orderBtn.Text = "Place Order";
             this.orderBtn.Click += new System.EventHandler(this.orderBtn_Click);
@@ -226,10 +226,10 @@
             this.reportsBtn.Image = global::FinalProject.Properties.Resources.products;
             this.reportsBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.reportsBtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.reportsBtn.Location = new System.Drawing.Point(3, 213);
+            this.reportsBtn.Location = new System.Drawing.Point(3, 315);
             this.reportsBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.reportsBtn.Name = "reportsBtn";
-            this.reportsBtn.Size = new System.Drawing.Size(238, 29);
+            this.reportsBtn.Size = new System.Drawing.Size(238, 45);
             this.reportsBtn.TabIndex = 5;
             this.reportsBtn.Text = "Purchase";
             this.reportsBtn.Click += new System.EventHandler(this.reportsBtn_Click);
@@ -244,7 +244,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label6.Location = new System.Drawing.Point(3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(839, 63);
+            this.label6.Size = new System.Drawing.Size(1101, 63);
             this.label6.TabIndex = 12;
             this.label6.Text = "General Store Management System";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -263,7 +263,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(995, 63);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1303, 63);
             this.tableLayoutPanel2.TabIndex = 12;
             // 
             // guna2Button1
@@ -283,10 +283,10 @@
             this.guna2Button1.Image = global::FinalProject.Properties.Resources.icons8_logout_64;
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button1.Location = new System.Drawing.Point(848, 2);
+            this.guna2Button1.Location = new System.Drawing.Point(1110, 2);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(144, 59);
+            this.guna2Button1.Size = new System.Drawing.Size(190, 59);
             this.guna2Button1.TabIndex = 6;
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
@@ -294,7 +294,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(995, 479);
+            this.ClientSize = new System.Drawing.Size(1303, 674);
             this.Controls.Add(this.flowPanel);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel2);

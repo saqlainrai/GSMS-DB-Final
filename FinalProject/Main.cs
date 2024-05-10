@@ -17,10 +17,12 @@ namespace FinalProject
         Color defaultButtonColor = Color.FromArgb(33, 11, 97); // Example default color
         Color activeButtonColor = Color.FromArgb(75, 8, 138); // Example active color
         Form parentForm;
-        public Main(Form parent)
+        string AdminId;
+        public Main(Form parent, string id)
         {
             InitializeComponent();
             parentForm = parent;
+            this.AdminId = id;
             
         }
         public void OpenChildForm(Form childForm)
@@ -75,7 +77,7 @@ namespace FinalProject
         private void customersBtn_Click(object sender, EventArgs e)
         {
             customersBtn.BackColor = activeButtonColor;
-            OpenChildForm(new customers());
+            OpenChildForm(new customers(this.AdminId));
         }
 
         private void employeesBtn_Click(object sender, EventArgs e)
@@ -87,7 +89,7 @@ namespace FinalProject
         private void supplierBtn_Click(object sender, EventArgs e)
         {
             supplierBtn.BackColor = activeButtonColor;  
-            OpenChildForm(new supplier());
+            OpenChildForm(new supplier(this.AdminId));
         }
 
         private void productsBtn_Click(object sender, EventArgs e)

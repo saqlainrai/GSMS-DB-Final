@@ -16,6 +16,7 @@ namespace FinalProject.UI_Forms
 {
     public partial class Login : Form
     {
+        const string AdminId = "3";
         public Login()
         {
             InitializeComponent();
@@ -47,9 +48,16 @@ namespace FinalProject.UI_Forms
             DL.Credentials credentials = new DL.Credentials(userName, password,null);
             string Role =  Queries.getRole(credentials);
             
-            if(Role == "Admin")
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd = new SqlCommand("SELECT Id FROM LoginCredentials WHERE userName = @Username AND password = @Password", con);
+            cmd.Parameters.AddWithValue("@Username", credentials.UserName);
+            cmd.Parameters.AddWithValue("@Password", credentials.Password);
+            object result = cmd.ExecuteScalar();
+            string userid = result != null ? result.ToString() : null;
+
+            if (Role == "Admin")
             {
-                Main main = new Main(this);
+                Main main = new Main(this, AdminId);
                 this.Hide();
                 main.Show();
                 userNameBx.Clear();
@@ -57,7 +65,7 @@ namespace FinalProject.UI_Forms
             }
             else if(Role == "Employee")
             {
-                EmployeeDashBoard employeeBoard = new EmployeeDashBoard(this);
+                EmployeeDashBoard employeeBoard = new EmployeeDashBoard(this, userid);
                 this.Hide();
                 employeeBoard.ShowDialog();
                 userNameBx.Clear();
@@ -69,8 +77,5 @@ namespace FinalProject.UI_Forms
                 passwordBx.Clear();
             }
         }
-
-
-
     }
 }
